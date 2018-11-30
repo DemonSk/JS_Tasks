@@ -1,0 +1,38 @@
+#navWrap {
+    height: 50px;
+    float: right;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#navWrap a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 20px;
+    height: 70px;
+    line-height: 70px;
+}
+
+.register {
+    position: absolute;
+    /* right: 0;
+    top: 50px; */
+    display: none;
+    z-index: 100;
+}
+
+#reg:checked+.register {
+    display: block;
+}
+
+#reg {
+    display: none;
+}
+
+label:hover {
+    color: red;
+}

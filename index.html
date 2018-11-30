@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Practice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="menu.css" />
+    <link rel="stylesheet" href="slider.css">
+
+</head>
+
+<body>
+    <div id="navWrap">
+
+        <a href="#">
+        Home
+    </a>
+    </div>
+    <label for="reg">Register</label><input type="checkbox" id="reg" />
+    <div class="register">
+        <form>
+            <p>First Name:<br>
+                <input type="text" name="first" /></p>
+            <p>Last Name: <br>
+                <input type="text" name="last" /></p>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <ul id="slides" style="padding-left: 0px;">
+        <li class="slide showing"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+    </ul>
+    <script>
+        var slides = document.querySelectorAll('#slides .slide');
+        var currentSlide = 0;
+        var slideInterval = setInterval(nextSlide, 2000);
+
+        function nextSlide() {
+            slides[currentSlide].className = 'slide';
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].className = 'slide showing';
+        }
+    </script>
+</body>
+
+</html>
